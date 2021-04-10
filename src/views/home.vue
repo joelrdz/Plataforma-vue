@@ -1,3 +1,3 @@
 <template>
-  <h1>Estrategia Creativa</h1>
+  <h2>Estrategia <br> Creativa</h2>
 </template>
