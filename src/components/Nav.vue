@@ -7,3 +7,9 @@
     <router-link to="/contact">Contacto</router-link>
   </nav>
 </template>
+
+<style lang="scss" scoped>
+nav {
+  // background-color: pink;
+}
+</style>
