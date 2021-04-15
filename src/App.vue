@@ -78,6 +78,19 @@ body {
 }
 </style>
 
+<style>
+
+@font-face {
+  font-family: "Akkurat";
+  src: url("./assets/fonts/AkkRg_Pro_1.otf") format("opentype");
+  font-weight: normal;
+}
+
+#app {
+  font-family: "Akkurat", Helvetica, Arial;
+}
+</style>
+
 <style lang="scss">
 
 header {
