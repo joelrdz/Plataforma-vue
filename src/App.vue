@@ -3,7 +3,7 @@
     <main>
       <Header />
       <div class="content">
-        <transition appear mode="out-in">
+        <transition name="aparecer" appear mode="out-in">
           <router-view></router-view>
         </transition>
       </div>
@@ -26,6 +26,25 @@ export default {
 </script>
 
 <style>
+/* Transitions */
+.aparecer-enter {
+  opacity: 0;
+}
+
+.aparecer-enter-active {
+  transition: opacity 100ms;
+}
+
+.aparecer-leave-to {
+  opacity: 0;
+}
+
+.aparecer-leave-active {
+  transition: opacity 250ms;
+}
+</style>
+
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,7 +53,7 @@ export default {
   /* color: #2c3e50; */
   /* margin-top: 60px; */
 
-  margin-top: 36px;
+  /* margin-top: 36px; */
   color: white;
 }
 
@@ -70,9 +89,19 @@ nav {
   width: var(--nav-width);
   float: right;
   height: calc(100vh - 72px);
+  height: 100vh;
 
   // border: 1px solid red;
   border-left: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: black;
 
   a {
     display: block;
@@ -81,6 +110,8 @@ nav {
     cursor: pointer;
     padding: 30px 15px;
     padding-left: 45px;
+
+    font-size: 22px;
   }
 
   a.router-link-active {
@@ -92,9 +123,27 @@ main {
   // border: 1px solid blue;
   width: calc(100% - var(--nav-width));
   float: left;
+}
 
-  .content {
-    padding: 20px;
+.content {
+  padding: 20px;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .content-block {
+
+    &__left {
+      display: inline-block;
+      width: 200px;
+      vertical-align: top;
+    }
+
+    &__right {
+      display: inline-block;
+      width: calc(100% - 205px);
+    }
   }
 }
 </style>

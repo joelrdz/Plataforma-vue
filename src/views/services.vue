@@ -1,42 +1,69 @@
 <template>
 <div>
-  <div>
-    <h2>Servicios</h2>
-    <p>
-      Consultora Integral de Negocios enfocada en la implementación de estrategias de negocios basadas en Tecnología, Diseño y Marketing.
-    </p>
-    <p>
-      XIII CREATIVE AGENCY Nuestra cultura de trabajo busca desarrollar estrategias creativas que conectan los negocios con el estilo de vida y los valores de los consumidores.
-      Analizamos factores políticos, ambientales, sociales, tecnológicos y económicos en busca de crear valor para la marca y el cliente.
-      Contamos historias a través de las experiencias de nuestros clientes. Hacemos conexiones entre nuestros clientes y sus consumidores.
-      Creamos experiencias con nuestros productos y servicios.
-    </p>
+  <div class="content-block">
+    <div class="content-block__left">
+      <h2>Servicios</h2>
+    </div>
+    <div class="content-block__right">
+      <p>
+        Consultora Integral de Negocios enfocada en la implementación de estrategias de negocios basadas en Tecnología, Diseño y Marketing.
+      </p>
+      <p>
+        XIII CREATIVE AGENCY Nuestra cultura de trabajo busca desarrollar estrategias creativas que conectan los negocios con el estilo de vida y los valores de los consumidores.
+        Analizamos factores políticos, ambientales, sociales, tecnológicos y económicos en busca de crear valor para la marca y el cliente.
+        Contamos historias a través de las experiencias de nuestros clientes. Hacemos conexiones entre nuestros clientes y sus consumidores.
+        Creamos experiencias con nuestros productos y servicios.
+      </p>
+    </div>
   </div>
-  <br>
-  <div class="design">
-    <h3>Diseño</h3>
-    <p>Desarrollo de marca y branding, diseño web y diseño de aplicaciones web y nativas.</p>
-    <div class="center">
-      <div class="figure">
-        <div class="square"></div>
-        <div class="circle"></div>
+  <br><br><br><br>
+
+  <div class="content-block">
+    <div class="content-block__left">
+      <h3>Diseño</h3>
+    </div>
+    <div class="content-block__right">
+      <div class="design">
+        <p>Desarrollo de marca y branding, diseño web y diseño de aplicaciones web y nativas.</p>
+        <div class="center">
+          <!-- <div class="figure">
+            <div class="square"></div>
+            <div class="circle"></div>
+          </div> -->
+          <div>
+            <img src="@/assets/figures/design.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <br>
-  <div class="development">
-    <h3>Desarrollo</h3>
-    <p>Desarrollo de software y aplicaciones.</p>
+  <br><br><br><br>
+
+  <div class="content-block">
+    <div class="content-block__left">
+      <h3>Desarrollo</h3>
+    </div>
+    <div class="content-block__right">
+      <div class="development">
+        <p>Desarrollo de software y aplicaciones.</p>
+        <div class="center">
+          <img src="@/assets/figures/dev.png" alt="">
+        </div>
+      </div>
+    </div>
   </div>
+  <br><br><br><br>
+
 </div>
 </template>
 
 <style lang="scss" scoped>
+.center {
+  text-align: center;
+  padding: 20px 10px;
+}
+
 .design {
-  .center {
-    text-align: center;
-    padding: 20px 10px;
-  }
 
   .figure {
     text-align: center;
@@ -58,10 +85,6 @@
     top: 40px;
     right: -130px;
   }
-}
-
-.dev {
-
 }
 
 .development {
