@@ -88,6 +88,7 @@ body {
 
 #app {
   font-family: "Akkurat", Helvetica, Arial;
+  font-size: 24px;
 }
 </style>
 

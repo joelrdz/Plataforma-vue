@@ -6,7 +6,7 @@
     <div class="content-block__right">
       <router-link  class="project-link" v-for="project in projects" :to="{ name: 'project-details', params: { slug: project.slug, project }}" :key="project.id">
         <div class="project-box">
-          <div class="project-box__title">{{project.name}} - {{project.year}}</div>
+          <div class="project-box__title">{{project.name}}</div>
           <div class="project-box__thumb" v-if="project.thumb">
             <img :src="require(`@/assets/images/${project.thumb}`)" alt="">
           </div>
@@ -18,9 +18,9 @@
 
 <style lang="scss">
 .project-box {
-  border: 1px solid white;
-  width: 200px;
-  height: 200px;
+
+  width: 300px;
+  height: 300px;
   display: inline-block;
 
 
@@ -40,14 +40,18 @@
     }
   }
 
+  transition: text-decoration 500ms;
+
   &:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    text-decoration: underline;
+    transition: text-decoration 500ms;
   }
 
 
 }
 
-  a {
+  .project-link,
+  .project-link:hover {
     color: white;
   }
 </style>
@@ -59,11 +63,7 @@ export default {
       projects
     }
   },
-  methods: {
-    getImgUrl(img) {
-      return require('../assets/images/' + img)
-    }
-  }
+  methods: {}
 }
 
 
@@ -95,10 +95,19 @@ const projects = [
     slug: 'petmatch',
     thumb: 'petmatch-thumb.jpg',
     images: [
-      'petmatch-01.jpg',
-      'petmatch-02.jpg',
-      'petmatch-03.jpg',
-      'petmatch-04.jpg'
+      {
+        href: require('@/assets/images/petmatch-04.jpg')
+      },
+      {
+        href: require('@/assets/images/petmatch-01.jpg')
+      },
+      {
+        href: require('@/assets/images/petmatch-02.jpg')
+      },
+      {
+        href: require('@/assets/images/petmatch-03.jpg')
+      },
+
     ],
     description: ``,
     show: true
@@ -130,10 +139,18 @@ const projects = [
     slug: 'balvin',
     thumb: 'balvin-thumb.jpg',
     images: [
-      'balvin-01.jpg',
-      'balvin-02.jpg',
-      'balvin-03.jpg',
-      'balvin-04.jpg'
+      {
+        href: require('@/assets/images/balvin-01.jpg')
+      },
+      {
+        href: require('@/assets/images/balvin-02.jpg')
+      },
+      {
+        href: require('@/assets/images/balvin-03.jpg')
+      },
+      {
+        href: require('@/assets/images/balvin-04.jpg')
+      },
     ],
     description: `
       Un mundo de buena vibra, fantasía, felicidad y música, eso es Oasis.
@@ -150,10 +167,18 @@ const projects = [
     slug: 'edc',
     thumb: 'edc-thumb.jpg',
     images: [
-      'edc-01.jpg',
-      'edc-02.jpg',
-      'edc-03.jpg',
-      'edc-04.jpg'
+      {
+        href: require('@/assets/images/edc-01.jpg')
+      },
+      {
+        href: require('@/assets/images/edc-02.jpg')
+      },
+      {
+        href: require('@/assets/images/edc-03.jpg')
+      },
+      {
+        href: require('@/assets/images/edc-04.jpg')
+      },
     ],
     description: `
       Dirección de arte, ilustración, animación, diseño de escenario y diseño de promocionales para festival.
@@ -168,10 +193,18 @@ const projects = [
     slug: 'juanes',
     thumb: 'juanes-thumb.jpg',
     images: [
-      'juanes-01.jpg',
-      'juanes-02.jpg',
-      'juanes-03.jpg',
-      'juanes-04.jpg'
+      {
+        href: require('@/assets/images/juanes-03.jpg')
+      },
+      {
+        href: require('@/assets/images/juanes-01.jpg')
+      },
+      {
+        href: require('@/assets/images/juanes-02.jpg')
+      },
+      {
+        href: require('@/assets/images/juanes-04.jpg')
+      },
     ],
     description: `
       La dirección de este proyecto se definió a partir del nombre del álbum. De la frase “Mis Planes Son Amarte” surgió un concepto integral para el arte del álbum y la comunicación oficial en medios. La narrativa que se muestra y el estilo gráfico lúdico son una forma de apelar a un segmento de mercado joven además de conservar la base de fans de un músico ya consolidado en el pop latinoamericano.
@@ -185,10 +218,18 @@ const projects = [
     slug: 'zigzag',
     thumb: 'zigzag-thumb.jpg',
     images: [
-      'zigzag-01.jpg',
-      'zigzag-02.jpg',
-      'zigzag-03.jpg',
-      'zigzag-04.jpg'
+      {
+        href: require('@/assets/images/zigzag-03.jpg')
+      },
+      {
+        href: require('@/assets/images/zigzag-01.jpg')
+      },
+      {
+        href: require('@/assets/images/zigzag-02.jpg')
+      },
+      {
+        href: require('@/assets/images/zigzag-04.jpg')
+      },
     ],
     description: `
       Compra y vende artículos semi nuevos de la manera más segura y conveniente del mercado.
@@ -203,10 +244,18 @@ const projects = [
     slug: 'mmx',
     thumb: 'mmx-thumb.jpg',
     images: [
-      'mmx-01.jpg',
-      'mmx-02.jpg',
-      'mmx-03.jpg',
-      'mmx-04.jpg'
+      {
+        href: require('@/assets/images/mmx-03.jpg')
+      },
+      {
+        href: require('@/assets/images/mmx-01.jpg')
+      },
+      {
+        href: require('@/assets/images/mmx-02.jpg')
+      },
+      {
+        href: require('@/assets/images/mmx-04.jpg')
+      },
     ],
     description: `
       Desde el 2013 el Congreso Nacional “Motor de México” se ha posicionado como la plataforma de Jóvenes Universitarios más importante del país, espacio donde expresan sus ideas con el propósito de formar líderes disruptivos, con un enfoque ético y preparados para los retos del futuro. Motor de México es un Congreso que busca impulsar a los catalizadores del cambio, a través de la formación de ciudadanos con un alto sentido de responsabilidad social.
@@ -220,10 +269,18 @@ const projects = [
     slug: 'cordem',
     thumb: 'cordem-thumb.jpg',
     images: [
-      'cordem-01.jpg',
-      'cordem-02.jpg',
-      'cordem-03.jpg',
-      'cordem-04.jpg'
+      {
+        href: require('@/assets/images/cordem-03.jpg')
+      },
+      {
+        href: require('@/assets/images/cordem-01.jpg')
+      },
+      {
+        href: require('@/assets/images/cordem-02.jpg')
+      },
+      {
+        href: require('@/assets/images/cordem-04.jpg')
+      },
     ],
     description: `
       Cordem es una organización de la sociedad civil, sin fines de lucro, donde creamos oportunidades para mujeres que carecen de apoyo económico y social y que quieren transformar su entorno.
@@ -239,10 +296,18 @@ const projects = [
     slug: 'blow',
     thumb: 'blow-thumb.jpg',
     images: [
-      'blow-01.jpg',
-      'blow-02.jpg',
-      'blow-03.jpg',
-      'blow-04.jpg'
+      {
+        href: require('@/assets/images/blow-04.jpg')
+      },
+      {
+        href: require('@/assets/images/blow-01.jpg')
+      },
+      {
+        href: require('@/assets/images/blow-02.jpg')
+      },
+      {
+        href: require('@/assets/images/blow-03.jpg')
+      },
     ],
     description: ``,
     show: true
